@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://f1nnc.github.io/mysite/markdown/2022/08/24/first.html</loc>
+<loc>https://f1nnc.github.io/mysite/2022/08/24/first.html</loc>
 <lastmod>2022-08-24T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://f1nnc.github.io/mysite/2022/08/28/bashhh.html</loc>
-<lastmod>2022-08-28T00:00:00-05:00</lastmod>
+<loc>https://f1nnc.github.io/mysite/2022/08/25/bashhh.html</loc>
+<lastmod>2022-08-25T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://f1nnc.github.io/mysite/2022/08/25/notebookquiz.html</loc>
+<lastmod>2022-08-25T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://f1nnc.github.io/mysite/about/</loc>
