@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: FinnSite
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+description: My name is Finn Carpenter and this is my blog
 github_username: F1nnC
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "mysite"
