@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "Stress Video Notes",
+            "content": "Gratitude list . My friends | My Parents | My Computer | My Home | My Skateboard | . Skating . Skating is something I&#39;m very grateful for. It is a way to relive stress when it comes to any problem I face. It is a fun way to get exercise, and reason to go outside. With each trick I do you almost get this feeling of being proud of how far you have come. It takes alot of work to get to do any trick in skateboarding, I just feel so much better when I can hit a trick that I want to hit. It&#39;s a hobby, stress reiliver, and fun thing to do. . Goals . I want to Learn 5 new tricks by the end of the year: . I will Skate Every Day | I will watch videos about how to do tricks | I will ask advice from my friends on tricks they know already | . I want to have atleast 3 A&#39;s by the end of the tri: . I will do my hw every day | I stucture my time better for when I study | I will pay more attetion in classes I dont enjoy (World Histoy) | .",
+            "url": "https://f1nnc.github.io/mysite/notebook/2022/09/15/Stress.html",
+            "relUrl": "/notebook/2022/09/15/Stress.html",
+            "date": " • Sep 15, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "App Ideas",
             "content": "Brainstorm . Exercise Counter | Game | Calculator | . Calculator Idea . Use Buttons For numbers | and having a counter at the top | Have a UI that looks like a calculator | .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/09/08/Ideas.html",
@@ -12,9 +23,9 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "App Lab Notes",
-            "content": "Notes . Our test is on Clash Royale | Use on event for everthing | Have the questions about triva or game facts | Use Variable to keep Score | Use the math tab to give score at the end | . Finshed Project . https://studio.code.org/projects/applab/IcRFV9_uevL48Hc1hK9LLbd1lGhj8rGvD4zg7c5FKL8 .",
+            "content": "Notes . Our test is on Clash Royale | Use on event for everthing | Have the questions about triva or game facts | Use Variable to keep Score | Use the math tab to give score at the end | . Finshed Project . https://studio.code.org/projects/applab/IcRFV9_uevL48Hc1hK9LLbd1lGhj8rGvD4zg7c5FKL8 . Issues . We had to go figure out how to not have negative score | I ended up stopping it show wrong answer, because real tests dont tell you got something wrong and just let you fix it | .",
             "url": "https://f1nnc.github.io/mysite/blog/2022/09/06/AppLab.html",
             "relUrl": "/blog/2022/09/06/AppLab.html",
             "date": " • Sep 6, 2022"
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "List and Dictionary",
             "content": "InfoDb = [] InfoDb.append({ &quot;FirstName&quot;: &quot;Finn&quot;, &quot;LastName&quot;: &quot;Carpenter&quot;, &quot;DOB&quot;: &quot;December 12&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;FavColor&quot;: &quot;Blue&quot;, &quot;Email&quot;: &quot;finnc51448@stu.powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2012 Nissan Xterra&quot;] }) InfoDb.append({ &quot;FirstName&quot;: &quot;Jake&quot;, &quot;LastName&quot;: &quot;Warren&quot;, &quot;DOB&quot;: &quot;September 8&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;FavColor&quot;: &quot;Blue&quot;, &quot;Email&quot;: &quot;jacobw22751@stu.powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2016-Toyota Tacoma&quot;] }) InfoDb.append({ &quot;FirstName&quot;: input(&quot;Name:&quot;), &quot;LastName&quot;: input(&quot;Last Name:&quot;), &quot;DOB&quot;: input(&quot;DOB:&quot;), &quot;Residence&quot;: input(&quot;Residence&quot;), &quot;FavColor&quot;: input(&quot;Favorite Color&quot;), &quot;Email&quot;: input(&quot;Email:&quot;), &quot;Owns_Cars&quot;: input(&quot;Owned_Cars:&quot;) }) print(InfoDb) . [{&#39;FirstName&#39;: &#39;Finn&#39;, &#39;LastName&#39;: &#39;Carpenter&#39;, &#39;DOB&#39;: &#39;December 12&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;Blue&#39;, &#39;Email&#39;: &#39;finnc51448@stu.powayusd.com&#39;, &#39;Owns_Cars&#39;: [&#39;2012 Nissan Xterra&#39;]}, {&#39;FirstName&#39;: &#39;Jake&#39;, &#39;LastName&#39;: &#39;Warren&#39;, &#39;DOB&#39;: &#39;September 8&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;Blue&#39;, &#39;Email&#39;: &#39;jacobw22751@stu.powayusd.com&#39;, &#39;Owns_Cars&#39;: [&#39;2016-Toyota Tacoma&#39;]}, {&#39;FirstName&#39;: &#39;erika&#39;, &#39;LastName&#39;: &#39;carpenter&#39;, &#39;DOB&#39;: &#39;2/16/1965&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;orange&#39;, &#39;Email&#39;: &#39;bakecarp@aol.com&#39;, &#39;Owns_Cars&#39;: &#39;tesla&#39;}] . def print_data(d_rec): print(d_rec[&quot;FirstName&quot;], d_rec[&quot;LastName&quot;]) # using comma puts space between values print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) # t is a tab indent print(&quot; t&quot;, &quot;FavColor:&quot;, d_rec[&quot;FavColor&quot;]) print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Cars:&quot;, d_rec[&quot;Owns_Cars&quot;]) # end=&quot;&quot; make sure no return occurs print() def for_loop(): print(&quot;For loop output n&quot;) for record in InfoDb: print_data(record) for_loop() . For loop output Finn Carpenter Residence: San Diego FavColor: Blue Birth Day: December 12 Cars: [&#39;2012 Nissan Xterra&#39;] Jake Warren Residence: San Diego FavColor: Blue Birth Day: September 8 Cars: [&#39;2016-Toyota Tacoma&#39;] erika carpenter Residence: San Diego FavColor: orange Birth Day: 2/16/1965 Cars: tesla .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/08/29/dictionary.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "Notebook Test",
             "content": "def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input(&quot;2&quot;) print(&quot;Answer: &quot; + msg) question_and_answer(&quot;What is 1+1?&quot;) . Question: What is 1+1? Answer: 2 . def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input(&quot;4&quot;) print(&quot;Answer: &quot; + msg) question_and_answer(&quot;What is 2+2&quot;) . Question: What is 2+2 Answer: 4 . q1 = &quot;&quot;&quot;Is the sky blue a. Yes b. No&quot;&quot;&quot; q2 = &quot;&quot;&quot;1+1 a. 2 b. 3 &quot;&quot;&quot; questions = {q1:&quot;a&quot;,q2:&quot;a&quot;} name = input(&quot;enter your name:&quot;) print(&quot;Hello&quot;, name) score = 0 for i in questions: print(i) ans = input(&quot;enter the answer: (a/b):&quot;) if ans==questions[i]: print(&quot;correct&quot;) score=score+1 print(score,&quot;point&quot;) else: print(&quot;wrong&quot;) . Hello Finn Is the sky blue a. Yes b. No correct 1 point 1+1 a. 2 b. 3 correct 2 point .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/08/25/notebookquiz.html",
@@ -45,7 +56,7 @@
     
   
     
-        ,"post4": {
+        ,"post5": {
             "title": "Bash Check",
             "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Using conditional statement to create a project directory and project Directory /home/finn/vscode exists. Directory /home/finn/vscode/APCSP exists. .",
             "url": "https://f1nnc.github.io/mysite/2022/08/25/bashhh.html",
@@ -56,7 +67,7 @@
     
   
     
-        ,"post5": {
+        ,"post6": {
             "title": "First",
             "content": "Skate Tricks I Know . . title: Skate Tricks | layout: default | toc: true | comments: true | categories: [Blog] . | Ollie | Pop Shuvit | Front side 180 | Manual | Boardslide | . My Deck . .",
             "url": "https://f1nnc.github.io/mysite/2022/08/24/first.html",
