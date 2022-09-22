@@ -1,10 +1,13 @@
 # College Board Notes
 > These are my college board notes
 
-- title: College Board Notes
+---
+- title: Skate Tricks
+- layout: default
 - toc: true
 - comments: true
-- Categories: [Notebook]
+- categories: [Blog]
+---
 
  # 1.1 Video
 ## Video 1
