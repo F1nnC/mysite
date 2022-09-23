@@ -9,7 +9,7 @@
 - categories: [Blog]
 ---
 
- # 1.1 Video
+# 1.1 Video
 ## Video 1
 - Computing innovations are improved through collaberation
 - Computing innovtion includes a program as an integral part of its function
