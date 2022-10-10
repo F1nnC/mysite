@@ -24,6 +24,17 @@
   
     
         ,"post2": {
+            "title": "Big Idea 1 'Identifying and Correcting Errors'",
+            "content": "College Board Big Idea 1 . Identifying and Correcting Errors (Unit 1.4) . Become familiar with types of errors and strategies to fixing them . Lightly Review Videos and take notes on topics with Blog | Complete assigned MCQ questions | . Here are some code segments you can practice fixing: . alphabet = &quot;abcdefghijklmnopqrstuvwxyz&quot; alphabetList = [] i = 1 for i in alphabet: alphabetList.append(i) print(alphabetList) . [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;] . The intended outcome is to determine where the letter is in the alphabet using a while loop . What is a good test case to check the current outcome? Why? | Make changes to get the intended outcome. | . letter = input(&quot;What letter would you like to check?&quot;) i = 1 while i &lt; 26: if alphabetList[i] == letter: print(&quot;The letter &quot; + letter + &quot; is the &quot; + str(i) + &quot; letter in the alphabet&quot;) i += 1 . The letter c is the 2 letter in the alphabet . The intended outcome is to determine where the letter is in the alphabet using a for loop . What is a good test case to check the current outcome? Why? | Make changes to get the intended outcome. | . letter = input(&quot;What letter would you like to check?&quot;) count = 1 for i in alphabetList: if i == letter: print(&quot;The letter &quot; + letter + &quot; is the &quot; + str(count) + &quot; letter in the alphabet&quot;) count += 1 . The letter c is the 3 letter in the alphabet . This code outputs the even numbers from 0 - 10 using a while loop. . Analyze this code to determine what can be changed to get the outcome to be odd numbers. (Code block below) | . evens = [] i = 0 while i &lt;= 10: evens.append(i) i += 2 print(evens) . [0, 2, 4, 6, 8, 10] . This code should output the odd numbers from 0 - 10 using a while loop. . odds = [] i = 1 while i &lt;= 10: odds.append(i) i += 2 print(odds) . [1, 3, 5, 7, 9] . This code outputs the even numbers from 0 - 10 using a for loop. . Analyze this code to determine what can be changed to get the outcome to be odd numbers. (Code block below) | . numbers = [0,1,2,3,4,5,6,7,8,9,10] evens = [] for i in numbers: if (numbers[i] % 2 == 0): evens.append(numbers[i]) print(evens) . [0, 2, 4, 6, 8, 10] . This code should output the odd numbers from 0 - 10 using a for loop. . numbers = [0,1,2,3,4,5,6,7,8,9,10] odds = [] for i in numbers: if (numbers[i] % 2 == 1): odds.append(numbers[i]) print(odds) . [1, 3, 5, 7, 9] . The intended outcome is printing a number between 1 and 100 once, if it is a multiple of 2 or 5 . What values are outputted incorrectly. Why? | Make changes to get the intended outcome. | . numbers = [] newNumbers = [] i = 0 if i == 0: pass while i &lt; 100: numbers.append(i) i += 1 for i in numbers: if numbers[i] % 5 == 0: newNumbers.append(numbers[i]) elif numbers[i] % 2 == 0: newNumbers.append(numbers[i]) print(newNumbers) . [0, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 35, 36, 38, 40, 42, 44, 45, 46, 48, 50, 52, 54, 55, 56, 58, 60, 62, 64, 65, 66, 68, 70, 72, 74, 75, 76, 78, 80, 82, 84, 85, 86, 88, 90, 92, 94, 95, 96, 98] . Challenge . This code segment is at a very early stage of implementation. . What are some ways to (user) error proof this code? | The code should be able to calculate the cost of the meal of the user | . Hint: . write a “single” test describing an expectation of the program of the program | test - input burger, expect output of burger price | run the test, which should fail because the program lacks that feature | write “just enough” code, the simplest possible, to make the test pass | . Then repeat this process until you get program working like you want it to work. . menu = {&quot;burger&quot;: 3.99, &quot;fries&quot;: 1.99, &quot;drink&quot;: 0.99} total = 0 #shows the user the menu and prompts them to select an item print(&quot;Menu&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) #why does v have &quot;str&quot; in front of it? #ideally the code should prompt the user multiple times item = input(&quot;Please select an item from the menu&quot;) total = menu[item] #code should add the price of the menu items selected by the user print(total) . Menu burger $3.99 fries $1.99 drink $0.99 3.99 . Hacks . Now is a good time to think about Testing of your teams final project... . What errors may arise in your project? | What are some test cases that can be used? | Make sure to document any bugs you encounter and how you solved the problem. | What are “single” tests that you will perform on your project? Or, your part of the project? As Hack Design and Test plan action … Divide these “single” tests into Issues for Scrum Board prior to coding. FYI, related tests could be in same Issue by using markdown checkboxes to separate tests. | . | . Errors we might encounter . Not knowing the code we need to use | Not collebrating as much as we need to | Not understanding how to code something | .",
+            "url": "https://f1nnc.github.io/mysite/collegeboard/error",
+            "relUrl": "/collegeboard/error",
+            "date": " • Oct 3, 2022"
+        }
+        
+    
+  
+    
+        ,"post3": {
             "title": "Collegenotes",
             "content": "College Board Notes . These are my college board notes . . title: Skate Tricks | layout: default | toc: true | comments: true | categories: [Blog] . | . 1.1 Video . Video 1 . Computing innovations are improved through collaberation | Computing innovtion includes a program as an integral part of its function | Computing innovation can be physical or nonphysical | Diverse perspectives eliminates bias in development Video 2 . | Pair programming is when two programmers work together. The diver writes the code and the pointers makes sure every line of code is correct. | Think-pair-share is a process where a student thinks through a process alone. Then they find a parter and share their ideas with them then the class. | Comments in code help partners | Github is a great way to work together | . Quiz Result . . Hacks . Me and my partner did not know each other before coming to this class | Both of us are white | He likes Football and I like Skating as our main hobbies | We do have a lot of similariities though | We are both new to coding but have differnt skills. He understandssome code better and I understand other code better. | .",
             "url": "https://f1nnc.github.io/mysite/2022/09/19/collegenotes.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "Stress Video Notes",
             "content": "Gratitude list . My friends | My Parents | My Computer | My Home | My Skateboard | . Skating Gratitude . Skating is something I&#39;m very grateful for. It is a way to relive stress when it comes to any problem I face. It is a fun way to get exercise, and reason to go outside. With each trick I do you almost get this feeling of being proud of how far you have come. It takes alot of work to get to do any trick in skateboarding, I just feel so much better when I can hit a trick that I want to hit. It&#39;s a hobby, stress reiliver, and fun thing to do. . Goals . I want to Learn 5 new tricks by the end of the year: . I will Skate Every Day | I will watch videos about how to do tricks | I will ask advice from my friends on tricks they know already | . I want to have atleast 3 A&#39;s by the end of the tri: . I will do my hw every day | I stucture my time better for when I study | I will pay more attetion in classes I dont enjoy (World Histoy) | .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/09/15/Stress.html",
@@ -45,7 +56,7 @@
     
   
     
-        ,"post4": {
+        ,"post5": {
             "title": "App Ideas",
             "content": "Brainstorm . Exercise Counter | Game | Calculator | . Calculator Idea . Use Buttons For numbers | and having a counter at the top | Have a UI that looks like a calculator | .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/09/08/Ideas.html",
@@ -56,7 +67,7 @@
     
   
     
-        ,"post5": {
+        ,"post6": {
             "title": "App Lab Notes",
             "content": "Notes . Our test is on Clash Royale | Use on event for everthing | Have the questions about triva or game facts | Use Variable to keep Score | Use the math tab to give score at the end | . Finshed Project . https://studio.code.org/projects/applab/IcRFV9_uevL48Hc1hK9LLbd1lGhj8rGvD4zg7c5FKL8 . Issues . We had to go figure out how to not have negative score | I ended up stopping it show wrong answer, because real tests dont tell you got something wrong and just let you fix it | .",
             "url": "https://f1nnc.github.io/mysite/blog/2022/09/06/AppLab.html",
@@ -67,7 +78,7 @@
     
   
     
-        ,"post6": {
+        ,"post7": {
             "title": "List and Dictionary",
             "content": "InfoDb = [] InfoDb.append({ &quot;FirstName&quot;: &quot;Finn&quot;, &quot;LastName&quot;: &quot;Carpenter&quot;, &quot;DOB&quot;: &quot;December 12&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;FavColor&quot;: &quot;Blue&quot;, &quot;Email&quot;: &quot;finnc51448@stu.powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2012 Nissan Xterra&quot;] }) InfoDb.append({ &quot;FirstName&quot;: &quot;Jake&quot;, &quot;LastName&quot;: &quot;Warren&quot;, &quot;DOB&quot;: &quot;September 8&quot;, &quot;Residence&quot;: &quot;San Diego&quot;, &quot;FavColor&quot;: &quot;Blue&quot;, &quot;Email&quot;: &quot;jacobw22751@stu.powayusd.com&quot;, &quot;Owns_Cars&quot;: [&quot;2016-Toyota Tacoma&quot;] }) InfoDb.append({ &quot;FirstName&quot;: input(&quot;Name:&quot;), &quot;LastName&quot;: input(&quot;Last Name:&quot;), &quot;DOB&quot;: input(&quot;DOB:&quot;), &quot;Residence&quot;: input(&quot;Residence&quot;), &quot;FavColor&quot;: input(&quot;Favorite Color&quot;), &quot;Email&quot;: input(&quot;Email:&quot;), &quot;Owns_Cars&quot;: input(&quot;Owned_Cars:&quot;) }) print(InfoDb) . [{&#39;FirstName&#39;: &#39;Finn&#39;, &#39;LastName&#39;: &#39;Carpenter&#39;, &#39;DOB&#39;: &#39;December 12&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;Blue&#39;, &#39;Email&#39;: &#39;finnc51448@stu.powayusd.com&#39;, &#39;Owns_Cars&#39;: [&#39;2012 Nissan Xterra&#39;]}, {&#39;FirstName&#39;: &#39;Jake&#39;, &#39;LastName&#39;: &#39;Warren&#39;, &#39;DOB&#39;: &#39;September 8&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;Blue&#39;, &#39;Email&#39;: &#39;jacobw22751@stu.powayusd.com&#39;, &#39;Owns_Cars&#39;: [&#39;2016-Toyota Tacoma&#39;]}, {&#39;FirstName&#39;: &#39;erika&#39;, &#39;LastName&#39;: &#39;carpenter&#39;, &#39;DOB&#39;: &#39;2/16/1965&#39;, &#39;Residence&#39;: &#39;San Diego&#39;, &#39;FavColor&#39;: &#39;orange&#39;, &#39;Email&#39;: &#39;bakecarp@aol.com&#39;, &#39;Owns_Cars&#39;: &#39;tesla&#39;}] . def print_data(d_rec): print(d_rec[&quot;FirstName&quot;], d_rec[&quot;LastName&quot;]) # using comma puts space between values print(&quot; t&quot;, &quot;Residence:&quot;, d_rec[&quot;Residence&quot;]) # t is a tab indent print(&quot; t&quot;, &quot;FavColor:&quot;, d_rec[&quot;FavColor&quot;]) print(&quot; t&quot;, &quot;Birth Day:&quot;, d_rec[&quot;DOB&quot;]) print(&quot; t&quot;, &quot;Cars:&quot;, d_rec[&quot;Owns_Cars&quot;]) # end=&quot;&quot; make sure no return occurs print() def for_loop(): print(&quot;For loop output n&quot;) for record in InfoDb: print_data(record) for_loop() . For loop output Finn Carpenter Residence: San Diego FavColor: Blue Birth Day: December 12 Cars: [&#39;2012 Nissan Xterra&#39;] Jake Warren Residence: San Diego FavColor: Blue Birth Day: September 8 Cars: [&#39;2016-Toyota Tacoma&#39;] erika carpenter Residence: San Diego FavColor: orange Birth Day: 2/16/1965 Cars: tesla .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/08/29/dictionary.html",
@@ -78,7 +89,7 @@
     
   
     
-        ,"post7": {
+        ,"post8": {
             "title": "Notebook Test",
             "content": "def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input(&quot;2&quot;) print(&quot;Answer: &quot; + msg) question_and_answer(&quot;What is 1+1?&quot;) . Question: What is 1+1? Answer: 2 . def question_and_answer(prompt): print(&quot;Question: &quot; + prompt) msg = input(&quot;4&quot;) print(&quot;Answer: &quot; + msg) question_and_answer(&quot;What is 2+2&quot;) . Question: What is 2+2 Answer: 4 . q1 = &quot;&quot;&quot;Is the sky blue a. Yes b. No&quot;&quot;&quot; q2 = &quot;&quot;&quot;1+1 a. 2 b. 3 &quot;&quot;&quot; questions = {q1:&quot;a&quot;,q2:&quot;a&quot;} name = input(&quot;enter your name:&quot;) print(&quot;Hello&quot;, name) score = 0 for i in questions: print(i) ans = input(&quot;enter the answer: (a/b):&quot;) if ans==questions[i]: print(&quot;correct&quot;) score=score+1 print(score,&quot;point&quot;) else: print(&quot;wrong&quot;) . Hello Finn Is the sky blue a. Yes b. No correct 1 point 1+1 a. 2 b. 3 correct 2 point .",
             "url": "https://f1nnc.github.io/mysite/notebook/2022/08/25/notebookquiz.html",
@@ -89,7 +100,7 @@
     
   
     
-        ,"post8": {
+        ,"post9": {
             "title": "Bash Check",
             "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Using conditional statement to create a project directory and project Directory /home/finn/vscode exists. Directory /home/finn/vscode/APCSP exists. .",
             "url": "https://f1nnc.github.io/mysite/2022/08/25/bashhh.html",
@@ -100,7 +111,7 @@
     
   
     
-        ,"post9": {
+        ,"post10": {
             "title": "First",
             "content": "Skate Tricks I Know . . title: Skate Tricks | layout: default | toc: true | comments: true | categories: [Blog] . | Ollie | Pop Shuvit | Front side 180 | Manual | Boardslide | . My Deck . .",
             "url": "https://f1nnc.github.io/mysite/2022/08/24/first.html",
