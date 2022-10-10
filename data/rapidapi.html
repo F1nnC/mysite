@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>FinnSite | My name is Finn Carpenter and this is my blog</title>
+<title>rapidapi | FinnSite</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="FinnSite" />
+<meta property="og:title" content="rapidapi" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="My name is Finn Carpenter and this is my blog" />
-<meta property="og:description" content="My name is Finn Carpenter and this is my blog" />
-<link rel="canonical" href="https://f1nnc.github.io/mysite/" />
-<meta property="og:url" content="https://f1nnc.github.io/mysite/" />
+<meta name="description" content="The covid api page" />
+<meta property="og:description" content="The covid api page" />
+<link rel="canonical" href="https://f1nnc.github.io/mysite/data/rapidapi" />
+<meta property="og:url" content="https://f1nnc.github.io/mysite/data/rapidapi" />
 <meta property="og:site_name" content="FinnSite" />
-<meta property="og:image" content="https://f1nnc.github.io/mysite/images/logo.png" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://f1nnc.github.io/mysite/images/logo.png" />
-<meta property="twitter:title" content="FinnSite" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-09T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="rapidapi" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"My name is Finn Carpenter and this is my blog","headline":"FinnSite","image":"https://f1nnc.github.io/mysite/images/logo.png","name":"FinnSite","url":"https://f1nnc.github.io/mysite/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-09T00:00:00-05:00","datePublished":"2022-10-09T00:00:00-05:00","description":"The covid api page","headline":"rapidapi","mainEntityOfPage":{"@type":"WebPage","@id":"https://f1nnc.github.io/mysite/data/rapidapi"},"url":"https://f1nnc.github.io/mysite/data/rapidapi"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/mysite/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://f1nnc.github.io/mysite/feed.xml" title="FinnSite" /><link rel="shortcut icon" type="image/x-icon" href="/mysite/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,108 +70,123 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><table>
-    <td><img src="https://f1nnc.github.io/mysite/images/logo1.png" height="60" title="Frontend" alt="" /></td>
-    <td> <a href="https://f1nnc.github.io/mysite/about/">About </a></td>
-    <td> <a href="https://f1nnc.github.io/mysite/2022/08/24/first.html">Blog </a></td>
-    <td> <a href="https://ponggame.io/">Game </a></td>
+        <!-- HTML table fragment for page -->
+<table>
+  <thead>
+  <tr>
+    <th>Time</th>
+    <th>All-time Cases</th>
+    <th>Recorded Deaths</th>
+    <th>Active Cases</th>
+  </tr>
+  </thead>
+  <tbody>
+    <td id="time"></td>
+    <td id="total_cases"></td>
+    <td id="total_deaths"></td>
+    <td id="active_cases"></td>
+  </tbody>
 </table>
-
-<h1 id="home-page">Home Page</h1>
-
-<p><img src="/mysite/images/epic.jpg" alt="my friends" /></p>
-
-<h1 id="table">Table</h1>
 
 <table>
-   <tr>             ew
-    <th>Finn</th>
-    <th>Jake</th>
-   </tr>
-
-   <tr>
-    <td>
-        <a href="https://f1nnc.github.io/mysite/">Finn's Site </a>
-    </td>
-    <td>
-        <a href="https://jakewarren2414.github.io/FirstFastpages/">Jake's Site </a>
-    </td>
-   </tr>
+  <thead>
+  <tr>
+    <th>Country</th>
+    <th>All-time Cases</th>
+    <th>Recorded Deaths</th>
+    <th>Active Cases</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- generated rows -->
+  </tbody>
 </table>
 
-<h1 id="posts">Posts</h1>
+<!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+<script>
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
+
+  // prepare fetch options
+  const url = "https://flask.nighthawkcodingsociety.com/api/covid/";
+  const headers = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+
+  // fetch the API
+  fetch(url, headers)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+      }
+      // valid response will have json data
+      response.json().then(data => {
+          console.log(data);
+          console.log(data.world_total)
+
+          // World Data
+          document.getElementById("time").innerHTML = data.world_total.statistic_taken_at;
+          document.getElementById("total_cases").innerHTML = data.world_total.total_cases;
+          document.getElementById("total_deaths").innerHTML = data.world_total.total_deaths;
+          document.getElementById("active_cases").innerHTML = data.world_total.active_cases;
+
+          // Country data
+          for (const row of data.countries_stat) {
+            console.log(row);
+
+            // tr for each row
+            const tr = document.createElement("tr");
+            // td for each column
+            const name = document.createElement("td");
+            const cases = document.createElement("td");
+            const deaths = document.createElement("td");
+            const active = document.createElement("td");
+
+            // data is specific to the API
+            name.innerHTML = row.country_name;
+            cases.innerHTML = row.cases; 
+            deaths.innerHTML = row.deaths; 
+            active.innerHTML = row.active_cases; 
+
+            // this builds td's into tr
+            tr.appendChild(name);
+            tr.appendChild(cases);
+            tr.appendChild(deaths);
+            tr.appendChild(active);
+
+            // add HTML to container
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  // catch fetch errors (ie ACCESS to server blocked)
+  .catch(err => {
+    console.error(err);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  });
+</script>
 
 
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/mysite/data/rapidapi">
-    rapidapi
-    </a>
-</h3><p class="post-meta-description">The covid api page</p><p class="post-meta">Oct 9, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/techtalk/rapidapi">
-    Python RapidAPI
-    </a>
-</h3><p class="post-meta-description">APIs can be found all over the internet.  A great consolidator of many APIs is <mark>RapidAPI</mark>.  In this blog we will use a site to consolidates API stats.  Learning a few lines of code and you can start extracting lots of data from the internet via APIs.</p><p class="post-meta">Oct 3, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/2022/09/19/collegenotes.html">
-    Collegenotes
-    </a>
-</h3><p class="post-meta">Sep 19, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/notebook/2022/09/15/Stress.html">
-    Stress Video Notes
-    </a>
-</h3><p class="post-meta">Sep 15, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/notebook/2022/09/08/Ideas.html">
-    App Ideas
-    </a>
-</h3><p class="post-meta">Sep 8, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/blog/2022/09/06/AppLab.html">
-    App Lab Notes
-    </a>
-</h3><p class="post-meta">Sep 6, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/notebook/2022/08/29/dictionary.html">
-    List and Dictionary
-    </a>
-</h3><p class="post-meta">Aug 29, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/notebook/2022/08/25/notebookquiz.html">
-    Notebook Test
-    </a>
-</h3><p class="post-meta">Aug 25, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/2022/08/25/bashhh.html">
-    Bash Check
-    </a>
-</h3><p class="post-meta">Aug 25, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/mysite/2022/08/24/first.html">
-    First
-    </a>
-</h3><p class="post-meta">Aug 24, 2022</p>
-</li></ul>
-
-    </div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/mysite/"></data>
