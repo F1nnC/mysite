@@ -4,20 +4,20 @@
         "post0": {
             "title": "3.9 and 3.11",
             "content": "Hold left click over my code segements to highlight the output better sorry . Notes . If code look the same i doesn&#39;t mean it does the same thin | Note what code | Before making an agorthim plan out all steps | Outline can be made with flow charts or just write them out | . Vocab . Binary Search: repeatedly dividing a search interval in half | . Hacks 3.9.1 . 1 . It is imporant because different algorithms can output different things ## 2 | . isRaining = True isSunny = False #If Statements if isRaining == True: print(&quot;Get an umbrella for the walk&quot;) else: print(&quot;Go on a Walk&quot;) if isSunny == True: print(&quot;Go on a walk :)&quot;) . Get an umbrella for the walk . isRaining = False isSunny = True # Setting Var goforWalk = isRaining or not(isSunny) # If statements if goforWalk == False: print(&quot;don&#39;t walk&quot;) else: print(&quot;go for a walk&quot;) . don&#39;t walk . Hacks for 3.9.2 . Natural lang . Start | Are you old enought to drink | if not wait a year | do you have money | if not you&#39;re poor | if so you get beer | . age = 17 money = 4 #When they are under age they wait a year until they are over while age &lt;= 20: age = age + 1 print(age) if age &gt;= 21: if money &gt;= 3.99: print(&quot;Here is your Drink&quot;) #if they don&#39;t have enough money they will say they are poor else: print(&quot;im poor&quot;) .",
-            "url": "https://f1nnc.github.io/mysite/.trimester%202%20student%20teaching/2022/12/06/hwfour.html",
-            "relUrl": "/.trimester%202%20student%20teaching/2022/12/06/hwfour.html",
-            "date": " • Dec 6, 2022"
+            "url": "https://f1nnc.github.io/mysite/.trimester%202%20student%20teaching/2022/12/07/hwfour.html",
+            "relUrl": "/.trimester%202%20student%20teaching/2022/12/07/hwfour.html",
+            "date": " • Dec 7, 2022"
         }
         
     
   
     
         ,"post1": {
-            "title": "Unit 3 Sections 8 and 10",
+            "title": "3.8 and 3.10",
             "content": "Notes . Section Objectives: . Express an algorithm that uses iteration without using a programming language | Determine the result or side effect of iteration statements | Write iteration statements | . Vocab . Iteration: a repeating portion of an algorithm, repeats a specified number of times or until a given condition is met . | Iteration Statements: change the sequential flow of control by repeating a set of statements zero or more times, until a stopping condition is met . | Repeat Until: if the condition evaluates to true initially, the loop body is not executed at all, due to the condition being checked before the loop . | Complete Traversal: All elements in a list are assessed . | Partial Traversal: Only a given portion of elements are assessed . | Iterative Traversal: When loops are used to iterate through a list and to access each single element at a time. . | . Notes . Iteration is part of an agrothim | Keeps looping until problem is finshed | range excludes that last value | insert( ) allows a value to be inserted into a list at index i | append( ) allows a value to be added at the end of a list | remove( ) allows an element at index i to be deleted from a list | length( ) returns the number of elements currently in a specific list | . Hacks Unit 3 Section 3.8.1 . 1 . Iteration is when a loop repeats steps until a condtion is met | . 2 . Cycle through water animals till nemo is found | . 3 . water = [&quot;whale&quot;, &quot;trout&quot;, &quot;shark&quot;, &quot;bass&quot;, &quot;nemo&quot;] for fi in water: if i == &quot;nemo&quot;: print(&quot;nemo is here&quot;) break else: print(i + &quot; is not nemo&quot;) . whale is not nemo trout is not nemo shark is not nemo bass is not nemo nemo is here . Hacks Unit 3 Section 3.8.2 . 1 . Iteration Statements are statments that go through a process of steps until a condition is met | . 2 . for i in reversed(range(1,11)): print(i) . 10 9 8 7 6 5 4 3 2 1 . 3 . numbers = 0 n = 1 while numbers &lt; 80: numbers = 3+(n-1)*13 n = n + 1 print(numbers) . 3 16 29 42 55 68 81 . Hacks Unit 3 Section 10 . nums = [10, 15, 20, 25, 30, 35] mnums = min(nums) for i in nums: if i &gt; mnums: mnums = mnums + 5 else: mnums = mnums + 5 print(mnums) . 40 . .",
-            "url": "https://f1nnc.github.io/mysite/2022/12/06/Unit_3_8_3_10.html",
-            "relUrl": "/2022/12/06/Unit_3_8_3_10.html",
-            "date": " • Dec 6, 2022"
+            "url": "https://f1nnc.github.io/mysite/.trimester%202%20student%20teaching/2022/12/07/Unit_3_8_3_10.html",
+            "relUrl": "/.trimester%202%20student%20teaching/2022/12/07/Unit_3_8_3_10.html",
+            "date": " • Dec 7, 2022"
         }
         
     
