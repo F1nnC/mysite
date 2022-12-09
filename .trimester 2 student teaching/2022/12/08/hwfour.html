@@ -434,7 +434,8 @@ You guessed the number in 2 guesses!
 <span class="n">numlist3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">middle</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">middle</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">middle</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">middle</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">numlist1</span>
@@ -451,7 +452,7 @@ You guessed the number in 2 guesses!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[57]
+<pre>79
 </pre>
 </div>
 </div>
@@ -466,7 +467,7 @@ You guessed the number in 2 guesses!
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>The Second number would be looked at more because binary starts at 0</li>
+<li>The Second number would be looked at more because binary starts at 1</li>
 <li>[3, 2, 8, 12, 99] can not be searched because the order of the numbers is not perfect</li>
 </ul>
 
