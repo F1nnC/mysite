@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      14 min read
     
 </span></p>
 
@@ -748,39 +748,10 @@ Cube: None
     <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">count</span>
 
-<span class="k">def</span> <span class="nf">count_words_starting_with</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">character</span><span class="p">):</span>
-    <span class="c1"># Split the string into a list of words</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="c1"># Initialize a counter variable</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="c1"># Iterate over the words and check if each word starts with the given character</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">character</span><span class="p">:</span>
-            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="k">return</span> <span class="n">count</span>
-
-<span class="k">def</span> <span class="nf">count_words_starting_with</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">character</span><span class="p">):</span>
-    <span class="c1"># Split the string into a list of words</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="c1"># Initialize a counter variable</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="c1"># Iterate over the words and check if each word starts with the given character</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">character</span><span class="p">:</span>
-            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="k">return</span> <span class="n">count</span>
-
 <span class="c1"># example usage:</span>
 <span class="n">s</span> <span class="o">=</span> <span class="s2">"   This is  a  test  string! Don't you think this is cool? "</span>
 <span class="n">a_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="n">d_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">all</span> <span class="o">=</span> <span class="n">count_words_starting_with</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">character</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Words starting with a:"</span><span class="p">,</span> <span class="n">a_count</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Words starting with d:"</span><span class="p">,</span> <span class="n">d_count</span><span class="p">)</span>
 </pre></div>
@@ -794,18 +765,10 @@ Cube: None
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb Cell 19</span> in <span class="ansi-cyan-fg">&lt;cell line: 78&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb#X24sdnNjb2RlLXJlbW90ZQ%3D%3D?line=75'&gt;76&lt;/a&gt;</span> a_count = count_words_starting_with_a_in_string(s)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb#X24sdnNjb2RlLXJlbW90ZQ%3D%3D?line=76'&gt;77&lt;/a&gt;</span> d_count = count_words_starting_with_d_in_string(s)
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb#X24sdnNjb2RlLXJlbW90ZQ%3D%3D?line=77'&gt;78&lt;/a&gt;</span> all = count_words_starting_with(string, character)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb#X24sdnNjb2RlLXJlbW90ZQ%3D%3D?line=78'&gt;79&lt;/a&gt;</span> print("Words starting with a:", a_count)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/finn/vscode/mysite/_notebooks/2022-12-04-lesson3.12_3.13.ipynb#X24sdnNjb2RlLXJlbW90ZQ%3D%3D?line=79'&gt;80&lt;/a&gt;</span> print("Words starting with d:", d_count)
-
-<span class="ansi-red-fg">NameError</span>: name 'string' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Words starting with a: 1
+Words starting with d: 1
+</pre>
 </div>
 </div>
 
