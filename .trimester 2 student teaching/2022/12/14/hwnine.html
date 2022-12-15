@@ -242,9 +242,10 @@ Number of iterations: 9
 <a class="anchor" href="#Inaficent-Way-to-sort-letters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inaficent Way to sort letters<a class="anchor-link" href="#Inaficent-Way-to-sort-letters"> </a>
 </h2>
 <ul>
-<li>Has to loop through all letters</li>
-<li>Then Compare</li>
-<li>Then swap</li>
+<li>Makes a varible for each Food</li>
+<li>Then puts them into a list</li>
+<li>On a larger Data Scale this would take longer</li>
+<li>This one took 7.6 seconds</li>
 </ul>
 
 </div>
@@ -257,7 +258,19 @@ Number of iterations: 9
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Inpat</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">food</span><span class="p">():</span>
+    <span class="n">Food1</span> <span class="o">=</span> <span class="s2">"pizza"</span>
+    <span class="n">Food2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input a food"</span><span class="p">)</span>
+    <span class="n">Food3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input a food"</span><span class="p">)</span>
+    <span class="n">foods</span> <span class="o">=</span> <span class="p">(</span><span class="n">Food1</span><span class="p">,</span> <span class="n">Food2</span><span class="p">,</span> <span class="n">Food3</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">foods</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"pizza"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"there is pizza"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">foods</span>
+
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">food</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -270,7 +283,8 @@ Number of iterations: 9
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[['a', 'b', 'c'], ['g', 'h', 'i'], ['x', 'y', 'z']]
+<pre>there is pizza
+('pizza', 'sprite', 'chips')
 </pre>
 </div>
 </div>
@@ -288,10 +302,10 @@ Number of iterations: 9
 <a class="anchor" href="#More-efficent-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>More efficent way<a class="anchor-link" href="#More-efficent-way"> </a>
 </h2>
 <ul>
-<li>Only goes to 2 items</li>
-<li>Then Compare</li>
-<li>Then swap</li>
-<li>Will be faster on larger data pools</li>
+<li>Only has one varible that list each food</li>
+<li>Doesn't need to be put in a list</li>
+<li>Works better on a larger scale</li>
+<li>Only takes 4.1 seconds</li>
 </ul>
 
 </div>
@@ -304,27 +318,15 @@ Number of iterations: 9
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"h"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"z"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">,</span> <span class="s2">"x"</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fast</span><span class="p">():</span>
+    <span class="n">foods</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"pizza"</span><span class="p">,</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input a food"</span><span class="p">),</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input a food"</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">foods</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"pizza"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"there is pizza"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">foods</span>
 
-<span class="k">def</span> <span class="nf">quicksort</span><span class="p">(</span><span class="n">letters</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-    <span class="c1"># If the list has fewer than 2 elements, it is already sorted</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">letters</span>
-    <span class="c1"># Select a pivot element</span>
-    <span class="n">pivot</span> <span class="o">=</span> <span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="c1"># Partition the list into smaller and larger groups</span>
-    <span class="n">smaller</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">letters</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pivot</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-    <span class="n">larger</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">letters</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-    <span class="c1"># Sort the smaller and larger groups recursively</span>
-    <span class="n">smaller_sorted</span> <span class="o">=</span> <span class="n">quicksort</span><span class="p">(</span><span class="n">smaller</span><span class="p">)</span>
-    <span class="n">larger_sorted</span> <span class="o">=</span> <span class="n">quicksort</span><span class="p">(</span><span class="n">larger</span><span class="p">)</span>
-    <span class="c1"># Concatenate the smaller group, the pivot, and the larger group</span>
-    <span class="k">return</span> <span class="n">smaller_sorted</span> <span class="o">+</span> <span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">+</span> <span class="n">larger_sorted</span>
-
-<span class="n">quicksort</span><span class="p">(</span><span class="n">letters</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
-
-<span class="n">sorted_letters</span> <span class="o">=</span> <span class="n">quicksort</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sorted_letters</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">fast</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -336,12 +338,9 @@ Number of iterations: 9
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [33]</span>
-<span class="ansi-red-fg">    quicksort(letters List[List[str]]) -&gt; List[List[str]]</span>
-                      ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>there is pizza
+('pizza', 'sprite', 'chips')
 </pre>
 </div>
 </div>
