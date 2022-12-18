@@ -8,11 +8,11 @@ $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
-  background-color: $dark-grey !important;
+  background-color: $light-grey !important;
 }
 
 a {
-    color: rgb(198, 73, 73) !important;
+    color: rgb(75, 73, 198) !important;
 }
 
 a:hover {
@@ -24,12 +24,12 @@ a:hover {
 }
 
 .site-nav {
-    background-color: $dark-grey;
+    background-color: $light-grey;
     border-color: $overlay-light;
 }
 
 * {
-    scrollbar-color: $dark-grey $overlay-light;
+    scrollbar-color: $light-grey $overlay-light;
 }
 
 pre, code {
