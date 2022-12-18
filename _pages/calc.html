@@ -1,0 +1,51 @@
+---
+permalink: /calc.html
+layout: default
+search_exclude: true
+---
+
+<body>
+<style>
+label {
+    border-style:solid;
+    border-width:1px;
+    border-radius: 2px;
+    padding: 5px;
+}
+</style>
+<input type="number" id="num1">
+<select id="op">
+    <option id="add">+</option>
+    <option id="sub">-</option>
+    <option id="mul">*</option>
+    <option id="div">/</option>
+</select>
+<input type="number" id="num2">
+<button onclick="Calc()">=</button>
+<label id="result">0</label>
+
+<script>
+    function Calc(){
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;
+        var o = document.getElementById("op").value;
+        a = Number(a)
+        b = Number(b)
+        if (o === "+") {
+            var result = a + b;
+        }
+        if (o === "-") {
+            var result = a - b;
+        }
+        if (o === "*") {
+            var result = a * b;
+        }
+        if (o === "/") {
+            var result = a / b;
+        }
+        document.getElementById("result").innerHTML = result
+        return result
+    }
+</script>
+</body>
+
