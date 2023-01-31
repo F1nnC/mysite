@@ -5,22 +5,6 @@ description: My grades vs College Boards
 permalink: /fiveone
 ---
 
-
-# Project Approval
-
-
-
-
-## Project Plan
-
-- "pre-view" outline/write-up of materials
-
-- Describe portion of Project you will use for Create Performance task
-
-- Describe code plan as it is required for CB,
-
-- Consider what will be demonstrated in video, aka video plan
-
 ## 5.1/2 Notes
 - Good and bad uses of technogloy
 - ChatGPT is texet based AI
