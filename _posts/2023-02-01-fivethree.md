@@ -6,9 +6,8 @@ permalink: /fivethree
 ---
 
 # 5.3/4 Notes/Hacks
-
-## Intentional or Purposeful bias
 ---
+## Intentional or Purposeful bias
 ### Google “What age groups use Facebook” vs “… TikTok”? What does the data say? Is there purposeful exclusion in these platforms? Is it harmful? Should it be corrected? Is it good business?
 - Facebook tends to have a larger audience in older people because the platform is way easier to use than other ones
 - Tiktok has most there audience in young audults/teens because most content on there is made for that demographic
@@ -20,16 +19,15 @@ permalink: /fivethree
 ### Talk about an algorithm that influences your decisions, think about these companies (ie FAANG - Facebook, Amazon, Apple,Netflix, Google)
 - The aglorithm that is choosed your decisions could be bais with the creators intent
 - Unintenally making other people have your ideas
-
-## Pair Questions
 ---
+## Pair Questions
 ### Ideas
 - Not made intentionally, It was made with only white people data, so it only recongizes white faces
 - This could be another reason to end digital divide because if all people had acesses to computers problems like this wouldn't happen as often
 - This should be corrected, not only is this a way to exlcude black people for something white people have (segration), from a buiness standpoint your losing a large demogrpahic
 - Use data/faces in this scenario from people all around the world, so bias like this dont happen
-
-
+---
+## Hacks
 ### CompSci has 150 ish principles students. Describe a crowdsource idea and how you might initiate it in our environment?
 - My feature is a nutrition feature. Some data I could collect is through crowdsourcing is asking the source or sample to look on the nutrition label on their lunches, and input some of the important values, such as calories.
 
