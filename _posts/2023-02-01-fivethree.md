@@ -2,7 +2,7 @@
 title: 5.3/4 notes
 layout: default
 description: My grades vs College Boards
-permalink: /fiveone
+permalink: /fivethree
 ---
 
 # 5.3/4 Notes/Hacks
