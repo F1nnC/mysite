@@ -20,4 +20,6 @@ Companies like Qualcomm aim to be reimbursed for the usage of their patents and 
 
 - To summarize this, I think that everyone should stick by all rules in the world, but realisticly that won't happen, Not complying with licenses is alot like stealing a cookie from a cookie jar, your not supposed to have it, but there is little to no way that anyone will ever know you ate it.
 
-- 
+- My Blog License is here: [Link]()
+## Hacks For 5.6
+
