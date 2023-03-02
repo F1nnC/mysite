@@ -1,6 +1,6 @@
 ---
 title: 5.5/6 notes
-layout: default
+layout: base
 description: Notes For 5.5 and 5.6
 permalink: /fivefivesix
 ---

@@ -3,7 +3,7 @@
 
 ---
 - title: Skate Tricks
-- layout: default
+- layout: base
 - toc: true
 - comments: true
 - categories: [Blog]

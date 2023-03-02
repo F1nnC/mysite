@@ -1,6 +1,6 @@
 ---
 title: 5.3/4 notes
-layout: default
+layout: base
 description: My grades vs College Boards
 permalink: /fivethree
 ---
