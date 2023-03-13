@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      14 min read
     
 </span></p>
 
@@ -140,14 +140,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Additionally,-review-all-the-imports-in-these-three-demos.--Create-a-definition-of-their-purpose,-specifically-these-...">Additionally, review all the imports in these three demos.  Create a definition of their purpose, specifically these ... </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks-Responses">Hacks Responses </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#AP-Prep">AP Prep </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Notes">Notes </a></li>
-<li class="toc-entry toc-h3"><a href="#Practice-Problems">Practice Problems </a></li>
-<li class="toc-entry toc-h3"><a href="#Lossy-data">Lossy data </a></li>
-<li class="toc-entry toc-h3"><a href="#lossless-data">lossless data </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#AP-Prep">AP Prep </a></li>
+<li class="toc-entry toc-h2"><a href="#Notes">Notes </a></li>
+<li class="toc-entry toc-h2"><a href="#Practice-Problems">Practice Problems </a></li>
+<li class="toc-entry toc-h2"><a href="#Lossy-data">Lossy data </a></li>
+<li class="toc-entry toc-h2"><a href="#lossless-data">lossless data </a></li>
 <li class="toc-entry toc-h2"><a href="#Programing-Paradigms">Programing Paradigms </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul>
@@ -233,17 +230,33 @@ window.onload = wrap_img;
 <blockquote>
 <p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
 <ul>
-<li>What are commands you use in terminal to access files?</li>
-<li>What are the command you use in Windows terminal to access files?</li>
-<li>What are some of the major differences?</li>
+<li>What are commands you use in terminal to access files?<ul>
+<li>cd, code, vi</li>
+</ul>
+</li>
+<li>What are the command you use in Windows terminal to access files?<ul>
+<li>cd, travel</li>
+</ul>
+</li>
+<li>What are some of the major differences?<ul>
+<li>Bash is a Linux based software, bash can do alot more things and is more flexible
+Provide what you observed, struggled with, or leaned while playing with this code.</li>
+</ul>
+</li>
+<li>Why is path a big deal when working with images?<ul>
+<li>So you can display images correctly</li>
+</ul>
+</li>
+<li>How does the meta data source and label relate to Unit 5 topics?<ul>
+<li>Meta Data is like the meta data inside the html websites</li>
+</ul>
+</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?<ul>
+<li>It is an interactive tool, that can show Images</li>
+</ul>
+</li>
 </ul>
 </blockquote>
-<p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
-<ul>
-<li>Why is path a big deal when working with images?</li>
-<li>How does the meta data source and label relate to Unit 5 topics?</li>
-<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
-</ul>
 
 </div>
 </div>
@@ -344,10 +357,22 @@ window.onload = wrap_img;
 <blockquote>
 <p>Introduction to creating meta data and manipulating images.  Look at each procedure and explain the the purpose and results of this program.  Add any insights or challenges as you explored this program.</p>
 <ul>
-<li>Does this code seem like a series of steps are being performed?</li>
-<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
-<li>Describe scale image?  What is before and after on pixels in three images?</li>
-<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
+<li>Does this code seem like a series of steps are being performed?<ul>
+<li>Yes, it first gets the images from the path in the Images dict, then scalzes and makes grey scale</li>
+</ul>
+</li>
+<li>Describe Grey Scale algorithm in English or Pseudo code?<ul>
+<li>All the pixels are averaged out and turn to a grey/black</li>
+</ul>
+</li>
+<li>Describe scale image?  What is before and after on pixels in three images?<ul>
+<li>They were either alot bigger or smaller, and got put to 320</li>
+</ul>
+</li>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described?<ul>
+<li>Yes the scaling of an image can be compression. Depending on the format, it can have lossy or lossless compression.</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -728,24 +753,55 @@ Scaled size:  (320, 320)
 <h2 id="AP-Prep">
 <a class="anchor" href="#AP-Prep" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP Prep<a class="anchor-link" href="#AP-Prep"> </a>
 </h2>
-<h3 id="Notes">
+<h2 id="Notes">
 <a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
-</h3>
-<p><img src="https://f1nnc.github.io/mysite/images/metadata.png" alt="Metadata"></p>
+</h2>
 <ul>
-<li>The Metadata for the image</li>
+<li>What are commands you use in terminal to access files?<ul>
+<li>cd, code, vi</li>
 </ul>
-<p><img src="https://f1nnc.github.io/mysite/images/csp.png" alt="red"></p>
-<ul>
-<li>Since the colors were being average, if added more value to one of the colors mannualy after the average, It would give it more of a hue in that color</li>
+</li>
+<li>What are the command you use in Windows terminal to access files?<ul>
+<li>cd, travel</li>
 </ul>
-<p><img src="https://f1nnc.github.io/mysite/images/data.png" alt="purple"></p>
-<ul>
-<li>By combining additions in values you are able to get all different colors</li>
+</li>
+<li>What are some of the major differences?<ul>
+<li>Bash is a Linux based software, bash can do alot more things and is more flexible
+Provide what you observed, struggled with, or leaned while playing with this code.</li>
 </ul>
-<h3 id="Practice-Problems">
+</li>
+<li>Why is path a big deal when working with images?<ul>
+<li>So you can display images correctly</li>
+</ul>
+</li>
+<li>How does the meta data source and label relate to Unit 5 topics?<ul>
+<li>Meta Data is like the meta data inside the html websites</li>
+</ul>
+</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?<ul>
+<li>It is an interactive tool, that can show Images</li>
+</ul>
+</li>
+<li>Does this code seem like a series of steps are being performed?<ul>
+<li>Yes, it first gets the images from the path in the Images dict, then scalzes and makes grey scale</li>
+</ul>
+</li>
+<li>Describe Grey Scale algorithm in English or Pseudo code?<ul>
+<li>All the pixels are averaged out and turn to a grey/black</li>
+</ul>
+</li>
+<li>Describe scale image?  What is before and after on pixels in three images?<ul>
+<li>They were either alot bigger or smaller, and got put to 320</li>
+</ul>
+</li>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described?<ul>
+<li>Yes the scaling of an image can be compression. Depending on the format, it can have lossy or lossless compression.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Practice-Problems">
 <a class="anchor" href="#Practice-Problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Problems<a class="anchor-link" href="#Practice-Problems"> </a>
-</h3>
+</h2>
 <ul>
 <li>What kind of compression is this, I descaled my image, but when I rescale it, it was blurry?<ul>
 <li>Answer: lossy</li>
@@ -760,16 +816,16 @@ Scaled size:  (320, 320)
 </ul>
 </li>
 </ul>
-<h3 id="Lossy-data">
+<h2 id="Lossy-data">
 <a class="anchor" href="#Lossy-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lossy data<a class="anchor-link" href="#Lossy-data"> </a>
-</h3>
+</h2>
 <ul>
 <li>The .JPEG format is a great example of <strong>lossy</strong> data</li>
 <li>The term <strong>lossy</strong> meaning, if you scale the image or change it, it wont be reversible</li>
 </ul>
-<h3 id="lossless-data">
+<h2 id="lossless-data">
 <a class="anchor" href="#lossless-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>lossless data<a class="anchor-link" href="#lossless-data"> </a>
-</h3>
+</h2>
 <ul>
 <li>As the name suggests, the term <strong>lossless</strong> means the changes in an image can be made without quailty being lost</li>
 <li>A great example of <strong>lossless</strong> formats are, .png .gif and .raw</li>
