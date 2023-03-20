@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      11 min read
     
 </span></p>
 
@@ -658,25 +658,10 @@ Created new uid mathontop
         <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{uid}</span><span class="s2">"</span><span class="p">)</span>
         
-<span class="n">hw_create</span><span class="p">()</span>
+<span class="c1"># hw_create()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Created
- {'id': 6, 'teacher': 'Profe Strutton', 'uid': 'spainshrocks', 'hw': 'Worksheet'}
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -723,49 +708,10 @@ Created new uid mathontop
     <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># "List Comprehensions", for each user add user.read() to list</span>
     <span class="k">return</span> <span class="n">json_ready</span>
 
-<span class="n">hw_read</span><span class="p">()</span>
+<span class="c1"># hw_read()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[{'id': 1,
-  'teacher': 'Mr. Mortensen',
-  'uid': 'bigmort123',
-  'hw': 'Hacks for 2.4a and b'},
- {'id': 2,
-  'teacher': 'Ms. Calicot',
-  'uid': 'ilovechem',
-  'hw': 'Compound Worksheet'},
- {'id': 3,
-  'teacher': 'Mr. Curry',
-  'uid': 'CurrysWorld',
-  'hw': 'Russia Worksheet'},
- {'id': 4,
-  'teacher': 'Ms. Boehm',
-  'uid': 'englishrocks',
-  'hw': 'Logical Fallicies Worksheet'},
- {'id': 5,
-  'teacher': 'Ms. Huang',
-  'uid': 'mathontop',
-  'hw': 'Problems 7-45 to 7-50'},
- {'id': 6,
-  'teacher': 'Profe Strutton',
-  'uid': 'spainshrocks',
-  'hw': 'Read 20mins'}]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -798,26 +744,10 @@ Created new uid mathontop
             <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
             <span class="k">return</span> <span class="s2">"Homework deleted, hopefully no more :)."</span>
 
-<span class="n">hw_delete</span><span class="p">()</span>
+<span class="c1"># hw_delete()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>'Homework is already none'</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -848,7 +778,131 @@ Created new uid mathontop
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span>
 
-<span class="n">hw_update</span><span class="p">()</span>
+<span class="c1"># hw_update()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hw_update</span><span class="p">():</span>
+    <span class="c1"># Checking for user before delete</span>
+    <span class="n">teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input your uid: "</span><span class="p">)</span>
+    <span class="n">passs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input your password: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_credentials</span><span class="p">(</span><span class="n">teach</span><span class="p">,</span> <span class="n">passs</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="n">newhw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What HW would you like to add"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="c1"># find the user matching the input uid</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">teach</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">""</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">newhw</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span>
+
+
+<span class="c1"># Delete method</span>
+<span class="k">def</span> <span class="nf">hw_delete</span><span class="p">():</span>
+    <span class="c1"># Checking for user before delete</span>
+    <span class="n">teach</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input your uid: "</span><span class="p">)</span>
+    <span class="n">passs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Input your password: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_credentials</span><span class="p">(</span><span class="n">teach</span><span class="p">,</span> <span class="n">passs</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+    
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="c1"># find the user matching the input uid</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">teach</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">==</span> <span class="s2">"No Homework"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">"Homework is already none"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">"No Homework"</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="k">return</span> <span class="s2">"Homework deleted, hopefully no more :)."</span>
+
+
+<span class="c1"># SQLAlchemy extracts all users from database, turns each user into JSON</span>
+<span class="k">def</span> <span class="nf">hw_read</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># "List Comprehensions", for each user add user.read() to list</span>
+    <span class="k">return</span> <span class="n">json_ready</span>
+
+<span class="c1"># Inputs, Try/Except, and SQLAlchemy work together to build a valid database object</span>
+<span class="k">def</span> <span class="nf">hw_create</span><span class="p">():</span>
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Found</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">return</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># keep going</span>
+    
+    <span class="c1"># request value that ensure creating valid object</span>
+    <span class="n">teacher</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your teaching name:"</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
+    <span class="n">hw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the homework that is due"</span><span class="p">)</span>
+    
+    
+    <span class="c1"># Initialize User object before date</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">teacher</span><span class="o">=</span><span class="n">teacher</span><span class="p">,</span> 
+                <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span>
+                <span class="n">hw</span><span class="o">=</span><span class="n">hw</span><span class="p">,</span>
+                <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+                <span class="p">)</span>
+    
+    <span class="c1"># write object to database</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Created</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{uid}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Select an option:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"1. Update homework"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2. Delete homework"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"3. Read homework"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"4. Create Account"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"0. Exit"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your choice: "</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"1"</span><span class="p">:</span>
+        <span class="n">hw_update</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"2"</span><span class="p">:</span>
+        <span class="n">hw_delete</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"3"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">hw_read</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"4"</span><span class="p">:</span>
+        <span class="n">hw_create</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"0"</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid choice. Please try again."</span><span class="p">)</span>
+        
+    <span class="n">menu</span><span class="p">()</span>  <span class="c1"># recursion to keep the menu going</span>
+
+<span class="c1"># Start the menu</span>
+<span class="n">menu</span><span class="p">()</span>
+
+    
 </pre></div>
 
     </div>
@@ -860,12 +914,17 @@ Created new uid mathontop
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>'Read 20mins'</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Select an option:
+1. Update homework
+2. Delete homework
+3. Read homework
+4. Create homework
+0. Exit
+[{'id': 1, 'teacher': 'Mr. Mortensen', 'uid': 'bigmort123', 'hw': 'Hacks for 2.4a and b'}, {'id': 2, 'teacher': 'Ms. Calicot', 'uid': 'ilovechem', 'hw': 'Compound Worksheet'}, {'id': 3, 'teacher': 'Mr. Curry', 'uid': 'CurrysWorld', 'hw': 'Russia Worksheet'}, {'id': 4, 'teacher': 'Ms. Boehm', 'uid': 'englishrocks', 'hw': 'Logical Fallicies Worksheet'}, {'id': 5, 'teacher': 'Ms. Huang', 'uid': 'mathontop', 'hw': 'Problems 7-45 to 7-50'}]
+Invalid choice. Please try again.
+</pre>
 </div>
-
 </div>
 
 </div>
