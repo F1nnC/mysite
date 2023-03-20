@@ -613,8 +613,11 @@ Records exist uid mathontop, or error.
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="c1"># find the user matching the input uid</span>
         <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">teach</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">newhw</span>
+        <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">==</span> <span class="s2">&quot;No Homework&quot;</span><span class="p">:</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">newhw</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">newhw</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span>
 
@@ -683,7 +686,7 @@ Records exist uid mathontop, or error.
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Update homework&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Delete homework&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Read homework&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Create homework&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Create Account&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0. Exit&quot;</span><span class="p">)</span>
 
 
@@ -727,13 +730,24 @@ Records exist uid mathontop, or error.
 1. Update homework
 2. Delete homework
 3. Read homework
-4. Create homework
+4. Create Account
 0. Exit
-{&#39;id&#39;: 1, &#39;teacher&#39;: &#39;Mr. Mortensen&#39;, &#39;uid&#39;: &#39;bigmort123&#39;, &#39;hw&#39;: &#39;due monday&#39;}
+Created
+ {&#39;id&#39;: 7, &#39;teacher&#39;: &#39;Profe Strutton&#39;, &#39;uid&#39;: &#39;spainshrocks&#39;, &#39;hw&#39;: &#39;problems 3-10&#39;}
+{&#39;id&#39;: 1, &#39;teacher&#39;: &#39;Mr. Mortensen&#39;, &#39;uid&#39;: &#39;bigmort123&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
 {&#39;id&#39;: 2, &#39;teacher&#39;: &#39;Ms. Calicot&#39;, &#39;uid&#39;: &#39;ilovechem&#39;, &#39;hw&#39;: &#39;Compound Worksheet&#39;}
 {&#39;id&#39;: 3, &#39;teacher&#39;: &#39;Mr. Curry&#39;, &#39;uid&#39;: &#39;CurrysWorld&#39;, &#39;hw&#39;: &#39;Russia Worksheet&#39;}
 {&#39;id&#39;: 4, &#39;teacher&#39;: &#39;Ms. Boehm&#39;, &#39;uid&#39;: &#39;englishrocks&#39;, &#39;hw&#39;: &#39;Logical Fallicies Worksheet&#39;}
 {&#39;id&#39;: 5, &#39;teacher&#39;: &#39;Ms. Huang&#39;, &#39;uid&#39;: &#39;mathontop&#39;, &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;}
+{&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Moulten&#39;, &#39;uid&#39;: &#39;chemrocks&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
+{&#39;id&#39;: 7, &#39;teacher&#39;: &#39;Profe Strutton&#39;, &#39;uid&#39;: &#39;spainshrocks&#39;, &#39;hw&#39;: &#39;problems 3-10, only b&#39;}
+{&#39;id&#39;: 1, &#39;teacher&#39;: &#39;Mr. Mortensen&#39;, &#39;uid&#39;: &#39;bigmort123&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
+{&#39;id&#39;: 2, &#39;teacher&#39;: &#39;Ms. Calicot&#39;, &#39;uid&#39;: &#39;ilovechem&#39;, &#39;hw&#39;: &#39;Compound Worksheet&#39;}
+{&#39;id&#39;: 3, &#39;teacher&#39;: &#39;Mr. Curry&#39;, &#39;uid&#39;: &#39;CurrysWorld&#39;, &#39;hw&#39;: &#39;Russia Worksheet&#39;}
+{&#39;id&#39;: 4, &#39;teacher&#39;: &#39;Ms. Boehm&#39;, &#39;uid&#39;: &#39;englishrocks&#39;, &#39;hw&#39;: &#39;Logical Fallicies Worksheet&#39;}
+{&#39;id&#39;: 5, &#39;teacher&#39;: &#39;Ms. Huang&#39;, &#39;uid&#39;: &#39;mathontop&#39;, &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;}
+{&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Moulten&#39;, &#39;uid&#39;: &#39;chemrocks&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
+{&#39;id&#39;: 7, &#39;teacher&#39;: &#39;Profe Strutton&#39;, &#39;uid&#39;: &#39;spainshrocks&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
 Invalid choice. Please try again.
 </pre>
 </div>
