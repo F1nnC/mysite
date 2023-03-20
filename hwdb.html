@@ -400,11 +400,11 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Records exist uid bigmort123, or error.
-Records exist uid ilovechem, or error.
-Records exist uid CurrysWorld, or error.
-Records exist uid englishrocks, or error.
-Records exist uid mathontop, or error.
+<pre>Created new uid bigmort123
+Created new uid ilovechem
+Created new uid CurrysWorld
+Created new uid englishrocks
+Created new uid mathontop
 </pre>
 </div>
 </div>
@@ -578,7 +578,7 @@ Records exist uid mathontop, or error.
 <pre>[{'id': 1,
   'teacher': 'Mr. Mortensen',
   'uid': 'bigmort123',
-  'hw': 'due monday'},
+  'hw': 'Hacks for 2.4a and b'},
  {'id': 2,
   'teacher': 'Ms. Calicot',
   'uid': 'ilovechem',
@@ -774,10 +774,12 @@ Records exist uid mathontop, or error.
         <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">==</span> <span class="s2">"No Homework"</span><span class="p">:</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">""</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">newhw</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">+</span> <span class="s2">", "</span> <span class="o">+</span> <span class="n">newhw</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span>
+        <span class="k">return</span>
 
 
 <span class="c1"># Delete method</span>
@@ -797,8 +799,10 @@ Records exist uid mathontop, or error.
             <span class="k">return</span> <span class="s2">"Homework is already none"</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">"No Homework"</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Homework Gone"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
             <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-            <span class="k">return</span> <span class="s2">"Homework deleted, hopefully no more :)."</span>
+            <span class="k">return</span>
 
 
 <span class="c1"># SQLAlchemy extracts all users from database, turns each user into JSON</span>
@@ -840,27 +844,32 @@ Records exist uid mathontop, or error.
         <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{uid}</span><span class="s2">"</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Select an option:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"1. Update homework"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"2. Delete homework"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"3. Read homework"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"4. Create Account"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"0. Exit"</span><span class="p">)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
     <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your choice: "</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"1"</span><span class="p">:</span>
         <span class="n">hw_update</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"2"</span><span class="p">:</span>
         <span class="n">hw_delete</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"3"</span><span class="p">:</span>
         <span class="n">read</span> <span class="o">=</span> <span class="n">hw_read</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">read</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"4"</span><span class="p">:</span>
         <span class="n">hw_create</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------------"</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">"0"</span><span class="p">:</span>
         <span class="k">return</span>
     <span class="k">else</span><span class="p">:</span>
@@ -884,28 +893,29 @@ Records exist uid mathontop, or error.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Select an option:
+<pre>-----------------------------------------
+Select an option:
 1. Update homework
 2. Delete homework
 3. Read homework
 4. Create Account
 0. Exit
+-----------------------------------------
 Created
- {'id': 7, 'teacher': 'Profe Strutton', 'uid': 'spainshrocks', 'hw': 'problems 3-10'}
-{'id': 1, 'teacher': 'Mr. Mortensen', 'uid': 'bigmort123', 'hw': 'No Homework'}
+ {'id': 6, 'teacher': 'Mr. Froom', 'uid': 'froommath', 'hw': '7-75 to 7-80'}
+-----------------------------------------
+{'id': 1, 'teacher': 'Mr. Mortensen', 'uid': 'bigmort123', 'hw': 'Hacks for 2.4a and b'}
 {'id': 2, 'teacher': 'Ms. Calicot', 'uid': 'ilovechem', 'hw': 'Compound Worksheet'}
 {'id': 3, 'teacher': 'Mr. Curry', 'uid': 'CurrysWorld', 'hw': 'Russia Worksheet'}
 {'id': 4, 'teacher': 'Ms. Boehm', 'uid': 'englishrocks', 'hw': 'Logical Fallicies Worksheet'}
 {'id': 5, 'teacher': 'Ms. Huang', 'uid': 'mathontop', 'hw': 'Problems 7-45 to 7-50'}
-{'id': 6, 'teacher': 'Mr. Moulten', 'uid': 'chemrocks', 'hw': 'No Homework'}
-{'id': 7, 'teacher': 'Profe Strutton', 'uid': 'spainshrocks', 'hw': 'problems 3-10, only b'}
-{'id': 1, 'teacher': 'Mr. Mortensen', 'uid': 'bigmort123', 'hw': 'No Homework'}
-{'id': 2, 'teacher': 'Ms. Calicot', 'uid': 'ilovechem', 'hw': 'Compound Worksheet'}
-{'id': 3, 'teacher': 'Mr. Curry', 'uid': 'CurrysWorld', 'hw': 'Russia Worksheet'}
-{'id': 4, 'teacher': 'Ms. Boehm', 'uid': 'englishrocks', 'hw': 'Logical Fallicies Worksheet'}
-{'id': 5, 'teacher': 'Ms. Huang', 'uid': 'mathontop', 'hw': 'Problems 7-45 to 7-50'}
-{'id': 6, 'teacher': 'Mr. Moulten', 'uid': 'chemrocks', 'hw': 'No Homework'}
-{'id': 7, 'teacher': 'Profe Strutton', 'uid': 'spainshrocks', 'hw': 'No Homework'}
+{'id': 6, 'teacher': 'Mr. Froom', 'uid': 'froommath', 'hw': '7-75 to 7-80'}
+-----------------------------------------
+{"id": 6, "teacher": "Mr. Froom", "uid": "froommath", "hw": "7-75 to 7-80, only a and b"}
+-----------------------------------------
+Homework Gone
+{"id": 6, "teacher": "Mr. Froom", "uid": "froommath", "hw": "No Homework"}
+-----------------------------------------
 Invalid choice. Please try again.
 </pre>
 </div>

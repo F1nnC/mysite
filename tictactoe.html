@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -171,6 +171,7 @@ window.onload = wrap_img;
         <span class="n">moves</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">XorO</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># switch to the next player's turn</span>
         <span class="k">if</span> <span class="n">moves</span> <span class="o">==</span> <span class="mi">9</span><span class="p">:</span>
+            <span class="n">converter</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Maximum moves reached! The game is over."</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="n">playing</span><span class="p">()</span>
@@ -192,6 +193,8 @@ window.onload = wrap_img;
         <span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">xs</span><span class="p">,</span> <span class="n">os</span>
 
+<span class="k">def</span> <span class="nf">winner</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello! Please select your move."</span><span class="p">)</span>
 <span class="n">playing</span><span class="p">()</span>
 </pre></div>
@@ -207,22 +210,6 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello! Please select your move.
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
-Please choose a valid input (1-9)
 ------------
 ['X', '~', '~']
 ['~', '~', '~']
@@ -247,18 +234,19 @@ Please choose a valid input (1-9)
 ['X', 'O', 'X']
 ['O', 'X', 'O']
 ['~', '~', '~']
+Please choose a valid input (1-9)
 ------------
 ['X', 'O', 'X']
 ['O', 'X', 'O']
-['X', '~', '~']
+['~', 'X', '~']
 ------------
 ['X', 'O', 'X']
 ['O', 'X', 'O']
-['X', 'O', '~']
+['~', 'X', 'O']
 ------------
 ['X', 'O', 'X']
 ['O', 'X', 'O']
-['X', 'O', 'X']
+['~', 'X', 'O']
 Maximum moves reached! The game is over.
 </pre>
 </div>
