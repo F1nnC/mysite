@@ -266,11 +266,11 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created new uid bigmort123
-Created new uid ilovechem
-Created new uid CurrysWorld
-Created new uid englishrocks
-Created new uid mathontop
+<pre>Records exist uid bigmort123, or error.
+Records exist uid ilovechem, or error.
+Records exist uid CurrysWorld, or error.
+Records exist uid englishrocks, or error.
+Records exist uid mathontop, or error.
 </pre>
 </div>
 </div>
@@ -448,7 +448,8 @@ Created new uid mathontop
  {&#39;id&#39;: 5,
   &#39;teacher&#39;: &#39;Ms. Huang&#39;,
   &#39;uid&#39;: &#39;mathontop&#39;,
-  &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;}]</pre>
+  &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;},
+ {&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Moulten&#39;, &#39;uid&#39;: &#39;chemrockss&#39;, &#39;hw&#39;: &#39;No Homework&#39;}]</pre>
 </div>
 
 </div>
@@ -616,9 +617,11 @@ Created new uid mathontop
         <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">==</span> <span class="s2">&quot;No Homework&quot;</span><span class="p">:</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">newhw</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Read&quot;</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">hw</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="n">newhw</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Read&quot;</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span>
@@ -657,6 +660,12 @@ Created new uid mathontop
 <span class="c1"># Inputs, Try/Except, and SQLAlchemy work together to build a valid database object</span>
 <span class="k">def</span> <span class="nf">hw_create</span><span class="p">():</span>
     <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">admin</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the Admin password&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">admin</span> <span class="o">==</span> <span class="s2">&quot;123poway&quot;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong Password&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your user id:&quot;</span><span class="p">)</span>
     <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
@@ -670,7 +679,8 @@ Created new uid mathontop
     <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your password&quot;</span><span class="p">)</span>
     <span class="n">hw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the homework that is due&quot;</span><span class="p">)</span>
     
-    
+    <span class="k">if</span> <span class="n">hw</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">hw</span> <span class="o">=</span> <span class="s2">&quot;No Homework&quot;</span>
     <span class="c1"># Initialize User object before date</span>
     <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">teacher</span><span class="o">=</span><span class="n">teacher</span><span class="p">,</span> 
                 <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span>
@@ -686,12 +696,35 @@ Created new uid mathontop
         <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown error uid </span><span class="si">{uid}</span><span class="s2">&quot;</span><span class="p">)</span>
 
+
+<span class="k">def</span> <span class="nf">hw_schema</span><span class="p">():</span>
+    
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL queries</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Fetch results of Schema</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;PRAGMA table_info(&#39;homework&#39;)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="c1"># Print the results</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># Close the database connection</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">conn</span>
+    
+<span class="c1"># hw_schema()</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Select an option:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Update homework&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Delete homework&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Read homework&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Create Account&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Create Account&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Read homework&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Update homework&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Delete Account&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5. Schema&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0. Exit&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
 
@@ -699,18 +732,22 @@ Created new uid mathontop
     <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your choice: &quot;</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
-        <span class="n">hw_update</span><span class="p">()</span>
+        <span class="n">hw_create</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
-        <span class="n">hw_delete</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
         <span class="n">read</span> <span class="o">=</span> <span class="n">hw_read</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Read&quot;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">read</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+        <span class="n">hw_update</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span>
-        <span class="n">hw_create</span><span class="p">()</span>
+        <span class="n">hw_delete</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;5&quot;</span><span class="p">:</span>
+        <span class="n">hw_schema</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------------&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>
         <span class="k">return</span>
@@ -737,28 +774,43 @@ Created new uid mathontop
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-----------------------------------------
 Select an option:
-1. Update homework
-2. Delete homework
-3. Read homework
-4. Create Account
+1. Create Account
+2. Read homework
+3. Update homework
+4. Delete Account
+5. Schema
 0. Exit
 -----------------------------------------
-Created
- {&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Froom&#39;, &#39;uid&#39;: &#39;froommath&#39;, &#39;hw&#39;: &#39;7-75 to 7-80&#39;}
------------------------------------------
+Read
 {&#39;id&#39;: 1, &#39;teacher&#39;: &#39;Mr. Mortensen&#39;, &#39;uid&#39;: &#39;bigmort123&#39;, &#39;hw&#39;: &#39;Hacks for 2.4a and b&#39;}
 {&#39;id&#39;: 2, &#39;teacher&#39;: &#39;Ms. Calicot&#39;, &#39;uid&#39;: &#39;ilovechem&#39;, &#39;hw&#39;: &#39;Compound Worksheet&#39;}
 {&#39;id&#39;: 3, &#39;teacher&#39;: &#39;Mr. Curry&#39;, &#39;uid&#39;: &#39;CurrysWorld&#39;, &#39;hw&#39;: &#39;Russia Worksheet&#39;}
 {&#39;id&#39;: 4, &#39;teacher&#39;: &#39;Ms. Boehm&#39;, &#39;uid&#39;: &#39;englishrocks&#39;, &#39;hw&#39;: &#39;Logical Fallicies Worksheet&#39;}
 {&#39;id&#39;: 5, &#39;teacher&#39;: &#39;Ms. Huang&#39;, &#39;uid&#39;: &#39;mathontop&#39;, &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;}
-{&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Froom&#39;, &#39;uid&#39;: &#39;froommath&#39;, &#39;hw&#39;: &#39;7-75 to 7-80&#39;}
+{&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Moulten&#39;, &#39;uid&#39;: &#39;chemrockss&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
 -----------------------------------------
-{&#34;id&#34;: 6, &#34;teacher&#34;: &#34;Mr. Froom&#34;, &#34;uid&#34;: &#34;froommath&#34;, &#34;hw&#34;: &#34;7-75 to 7-80, only a and b&#34;}
------------------------------------------
-Homework Gone
-{&#34;id&#34;: 6, &#34;teacher&#34;: &#34;Mr. Froom&#34;, &#34;uid&#34;: &#34;froommath&#34;, &#34;hw&#34;: &#34;No Homework&#34;}
+Created
+ {&#39;id&#39;: 7, &#39;teacher&#39;: &#39;Mr. Campeo&#39;, &#39;uid&#39;: &#39;campeo&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
 -----------------------------------------
 Invalid choice. Please try again.
+Invalid choice. Please try again.
+-----------------------------------------
+Read
+{&#34;id&#34;: 7, &#34;teacher&#34;: &#34;Mr. Campeo&#34;, &#34;uid&#34;: &#34;campeo&#34;, &#34;hw&#34;: &#34;worksheet&#34;}
+-----------------------------------------
+Read
+{&#39;id&#39;: 1, &#39;teacher&#39;: &#39;Mr. Mortensen&#39;, &#39;uid&#39;: &#39;bigmort123&#39;, &#39;hw&#39;: &#39;Hacks for 2.4a and b&#39;}
+{&#39;id&#39;: 2, &#39;teacher&#39;: &#39;Ms. Calicot&#39;, &#39;uid&#39;: &#39;ilovechem&#39;, &#39;hw&#39;: &#39;Compound Worksheet&#39;}
+{&#39;id&#39;: 3, &#39;teacher&#39;: &#39;Mr. Curry&#39;, &#39;uid&#39;: &#39;CurrysWorld&#39;, &#39;hw&#39;: &#39;Russia Worksheet&#39;}
+{&#39;id&#39;: 4, &#39;teacher&#39;: &#39;Ms. Boehm&#39;, &#39;uid&#39;: &#39;englishrocks&#39;, &#39;hw&#39;: &#39;Logical Fallicies Worksheet&#39;}
+{&#39;id&#39;: 5, &#39;teacher&#39;: &#39;Ms. Huang&#39;, &#39;uid&#39;: &#39;mathontop&#39;, &#39;hw&#39;: &#39;Problems 7-45 to 7-50&#39;}
+{&#39;id&#39;: 6, &#39;teacher&#39;: &#39;Mr. Moulten&#39;, &#39;uid&#39;: &#39;chemrockss&#39;, &#39;hw&#39;: &#39;No Homework&#39;}
+{&#39;id&#39;: 7, &#39;teacher&#39;: &#39;Mr. Campeo&#39;, &#39;uid&#39;: &#39;campeo&#39;, &#39;hw&#39;: &#39;worksheet&#39;}
+-----------------------------------------
+-----------------------------------------
+Homework Gone
+{&#34;id&#34;: 7, &#34;teacher&#34;: &#34;Mr. Campeo&#34;, &#34;uid&#34;: &#34;campeo&#34;, &#34;hw&#34;: &#34;No Homework&#34;}
+-----------------------------------------
 </pre>
 </div>
 </div>
