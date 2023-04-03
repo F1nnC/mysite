@@ -259,7 +259,7 @@ layout: notebook
 <p>Data Structures.  Build a List Comprehension example</p>
 <ul>
 <li>list = [calc(item) for item in items]<ul>
-<li>Used them inside my Hashmaps Hacks</li>
+<li>Printing the top scores on a game</li>
 </ul>
 </li>
 </ul>
@@ -275,38 +275,51 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">WhoReallyCares</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Who Really Cares&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;TV Girl&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
-    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Indie&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Taking What&#39;s Not Yours&quot;</span><span class="p">,</span>
-        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Song About Me&quot;</span><span class="p">,</span>
-        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Cigaretts out the Window&quot;</span><span class="p">,</span>
-        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Till You Tell Me to Leave&quot;</span><span class="p">,</span>
-        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Not Allowed&quot;</span><span class="p">,</span>
-        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;(Do The) Act Like You Never Met Me&quot;</span><span class="p">,</span>
-        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;Safeword&quot;</span><span class="p">,</span>
-        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;For You&quot;</span><span class="p">,</span>
-        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;Loving Machine&quot;</span><span class="p">,</span>
-        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;Heaven Is a Bedroom&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Users_Scores</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Users&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Gene&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;High_Score&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;James&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;High_Score&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;Finn&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;High_Score&quot;</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;Zeen&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;High_Score&quot;</span><span class="p">:</span> <span class="mi">130</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;Ediwn&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;High_Score&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="c1">## Using SET</span>
-<span class="n">WhoReallyCares</span><span class="p">[</span><span class="s2">&quot;biggest fan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Finn Carpenter&#39;</span><span class="p">,</span> <span class="s1">&#39;Nobody Else&#39;</span> <span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">WhoReallyCares</span><span class="p">[</span><span class="s2">&quot;biggest fan&quot;</span><span class="p">])</span>
+<span class="n">Scores</span> <span class="o">=</span> <span class="p">{</span><span class="n">user</span><span class="p">:</span> <span class="n">Users_Scores</span><span class="p">[</span><span class="s1">&#39;Users&#39;</span><span class="p">][</span><span class="n">user</span><span class="p">]</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">Users_Scores</span><span class="p">[</span><span class="s1">&#39;Users&#39;</span><span class="p">]}</span>
 
-<span class="c1">## Gets all the track names and puts them into a list</span>
-<span class="n">track_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">track_name</span> <span class="k">for</span> <span class="n">track_name</span> <span class="ow">in</span> <span class="n">WhoReallyCares</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">track_names</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sort_scores</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+    <span class="n">sorted_scores</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;High_Score&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">sorted_scores</span>
 
-<span class="c1">## I love &quot;insert song name&quot; + list comprehenison using GET</span>
-<span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I love </span><span class="si">{</span><span class="n">WhoReallyCares</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">WhoReallyCares</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tracks&quot;</span><span class="p">)]</span>
+<span class="n">sorted_scores</span> <span class="o">=</span> <span class="n">sort_scores</span><span class="p">(</span><span class="n">Scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_scores</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Finn&#39;: {&#39;High_Score&#39;: 160}, &#39;Zeen&#39;: {&#39;High_Score&#39;: 130}, &#39;Gene&#39;: {&#39;High_Score&#39;: 123}, &#39;James&#39;: {&#39;High_Score&#39;: 50}, &#39;Ediwn&#39;: {&#39;High_Score&#39;: 12}}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
