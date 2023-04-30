@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      14 min read
     
 </span></p>
 
@@ -1035,6 +1035,318 @@ Today is Sunday and you have to do Pull
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-Hacks">List Hacks<a class="anchor-link" href="#List-Hacks"> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_team</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jake&quot;</span><span class="p">,</span> <span class="s2">&quot;Finn&quot;</span><span class="p">,</span> <span class="s2">&quot;Kush&quot;</span><span class="p">,</span> <span class="s2">&quot;James&quot;</span><span class="p">,</span> <span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;Zeen&quot;</span><span class="p">,</span> <span class="s2">&quot;Ediwn&quot;</span><span class="p">]</span>
+<span class="n">my_team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Luka&quot;</span><span class="p">)</span>
+<span class="n">my_team</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Jake&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_team</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="PopCorn-Hacks">PopCorn Hacks<a class="anchor-link" href="#PopCorn-Hacks"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="How-it-works">How it works<a class="anchor-link" href="#How-it-works"> </a></h3><ul>
+<li>The while keeps looping until the condintion give is met or not true<ul>
+<li>I have two list and varibles so each time it loops over it picks the next value in both list</li>
+</ul>
+</li>
+<li>the for loops just loops for the amount of things inside<ul>
+<li>It does a simlar thing but just needs one varible to cycle through the days</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">week</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Push&quot;</span><span class="p">,</span> <span class="s2">&quot;Pull&quot;</span><span class="p">,</span> <span class="s2">&quot;Wrestling&quot;</span><span class="p">,</span> <span class="s2">&quot;Wrestling&quot;</span><span class="p">,</span> <span class="s2">&quot;Wrestling&quot;</span><span class="p">,</span> <span class="s2">&quot;Legs&quot;</span><span class="p">,</span> <span class="s2">&quot;Pull&quot;</span><span class="p">]</span>
+<span class="n">week_days</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">,</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span> <span class="s2">&quot;Sunday&quot;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">week</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">week_days</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Today is </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> and you have to do </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">week</span><span class="p">:</span>
+    <span class="n">dayweek</span> <span class="o">=</span> <span class="n">week_days</span><span class="p">[</span><span class="n">z</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Today is </span><span class="si">{</span><span class="n">dayweek</span><span class="si">}</span><span class="s2"> and you have to do </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictonary-Hacks">Dictonary Hacks<a class="anchor-link" href="#Dictonary-Hacks"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key3&quot;</span><span class="p">:</span> <span class="s2">&quot;value3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;key4&quot;</span><span class="p">:</span> <span class="s2">&quot;value4&quot;</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">update_dict_table</span><span class="p">():</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;clear&quot;</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;posix&quot;</span> <span class="k">else</span> <span class="s2">&quot;cls&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionaries</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Key               Value</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span><span class="si">}{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">What would you like to do?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Add a key-value pair&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Remove a key-value pair&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Quit&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">add_dict_pair</span><span class="p">():</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the key: &quot;</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the value: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">and</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="nb">dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+
+<span class="k">def</span> <span class="nf">remove_dict_pair</span><span class="p">():</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the key to remove: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">del</span> <span class="nb">dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">process_user_choice</span><span class="p">():</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your choice: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+        <span class="n">add_dict_pair</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+        <span class="n">remove_dict_pair</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid choice. Please try again.&quot;</span><span class="p">)</span>
+    <span class="n">update_dict_table</span><span class="p">()</span>
+    <span class="n">process_user_choice</span><span class="p">()</span>
+
+
+<span class="n">update_dict_table</span><span class="p">()</span>
+<span class="n">process_user_choice</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dictionaries
+
+Key               Value
+
+key1              value1
+key2              value2
+key3              value3
+key4              value4
+
+What would you like to do?
+1. Add a key-value pair
+2. Remove a key-value pair
+3. Quit
+Dictionaries
+
+Key               Value
+
+key1              value1
+key2              value2
+key3              value3
+key4              value4
+key5              value5
+
+What would you like to do?
+1. Add a key-value pair
+2. Remove a key-value pair
+3. Quit
+Dictionaries
+
+Key               Value
+
+key1              value1
+key2              value2
+key3              value3
+key4              value4
+
+What would you like to do?
+1. Add a key-value pair
+2. Remove a key-value pair
+3. Quit
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2D-Array-Hacks">2D-Array Hacks<a class="anchor-link" href="#2D-Array-Hacks"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">def</span> <span class="nf">generate_array</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">data</span>
+    <span class="n">new_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+        <span class="n">row_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">and</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">]):</span>
+                <span class="n">row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="n">new_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_data</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">new_data</span>
+    <span class="n">draw_array</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">draw_array</span><span class="p">():</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">image_width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">50</span>
+    <span class="n">image_height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">image_width</span><span class="p">,</span> <span class="n">image_height</span><span class="p">))</span>
+    <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+        <span class="n">row_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">])):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span>
+            <span class="n">cell_color</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+            <span class="n">draw</span><span class="o">.</span><span class="n">rectangle</span><span class="p">([(</span><span class="n">col</span> <span class="o">*</span> <span class="mi">50</span><span class="p">,</span> <span class="n">row</span> <span class="o">*</span> <span class="mi">50</span><span class="p">),</span> <span class="p">((</span><span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span><span class="p">,</span> <span class="p">(</span><span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)],</span> <span class="n">fill</span><span class="o">=</span><span class="n">cell_color</span><span class="p">)</span>
+            <span class="n">row_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_values</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;grid&quot;</span><span class="p">))</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">rows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of rows (1-10): &quot;</span><span class="p">))</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of columns (1-10): &quot;</span><span class="p">))</span>
+<span class="n">generate_array</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>+-----+-----+-----+
+| 119 | 164 | 210 |
++-----+-----+-----+
+| 194 |  91 |  23 |
++-----+-----+-----+
+|  43 |  12 | 109 |
++-----+-----+-----+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAABqklEQVR4nO3TQY2EQABE0WXtEPCECrTghRNOcDIG+jaHnp+8p6CSn1rO8/z7Pdu2zZ4wsO/77AkD/7MH8C0J8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwjwJ8yTMkzBPwrzleZ7ZGwau65o9YeC+79kTBrwwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwT8I8CfMkzJMwb1nXdfaGgfd9Z08YOI5j9oQBL8yTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMyTME/CPAnzJMz7AGtZDizMRrcxAAAAAElFTkSuQmCC" />
+</div>
+
+</div>
+
 </div>
 </div>
 
